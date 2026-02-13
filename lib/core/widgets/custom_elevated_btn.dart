@@ -8,9 +8,9 @@ class CustomElevatedButton extends StatelessWidget {
     required this.backgroundColor,
   });
 
-  final void Function() onPressed;
-  final Color backgroundColor;
   final String btnTitle;
+  final Color backgroundColor;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class CustomElevatedButton extends StatelessWidget {
       ),
       child: Text(
         btnTitle,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 19,
           color: Colors.black,
           fontWeight: FontWeight.bold,

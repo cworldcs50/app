@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../../core/constants/app_colors.dart';
-import '../../../core/constants/app_strings.dart';
-import '../../../core/widgets/custom_elevated_btn.dart';
+import '../../core/routing/app_routes.dart';
+import '../../core/constants/app_colors.dart';
+import '../../core/constants/app_strings.dart';
+import '../../core/widgets/custom_elevated_btn.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -17,12 +18,16 @@ class Home extends StatelessWidget {
             CustomElevatedButton(
               btnTitle: AppStrings.kGold,
               backgroundColor: AppColors.gold,
-              onPressed: () {},
+              onPressed:
+                  () async =>
+                      await Navigator.of(context).pushNamed(AppRoutes.kGold),
             ),
             CustomElevatedButton(
               btnTitle: AppStrings.kSilver,
               backgroundColor: AppColors.silver,
-              onPressed: () {},
+              onPressed:
+                  () async =>
+                      await Navigator.of(context).pushNamed(AppRoutes.kSilver),
             ),
           ],
         ),
